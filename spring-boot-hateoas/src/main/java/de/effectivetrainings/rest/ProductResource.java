@@ -46,12 +46,12 @@ public class ProductResource {
         return productService.remove(id);
     }
 
-    @RequestMapping(value = "/")
+    @RequestMapping
     public List<Product> catalog() {
        return productService.catalog();
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    @RequestMapping(method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.CREATED)
     public void newProduct(@RequestBody Product product) {
         productService.newProduct(product);

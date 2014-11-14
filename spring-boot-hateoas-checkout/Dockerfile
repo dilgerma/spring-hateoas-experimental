@@ -15,6 +15,6 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 COPY /target/checkout.jar /sources/app.jar
 EXPOSE 8080
-CMD java -jar /sources/app.jar
+CMD java -Djava.security.egd=file:/dev/./urandom -jar /sources/app.jar
 
 
