@@ -1,0 +1,11 @@
+web: 
+   build: spring-boot-hateoas
+   ports:  
+   - "8080:8080"
+   links: 
+   - checkout
+ #  command: java -Djava.security.egd=file:/dev/./urandom -jar /sources/app.jar
+   volumes:
+   - /var/log/system:/var/log/system
+checkout:
+   image: hateoas-checkout
